@@ -10,7 +10,7 @@ const comments=require('./routes/comment.route')
 app.use(express.json());
 app.use('/files',express.static(path.join(__dirname,'files')))
 app.use(cors({
-    origin: 'https://echoblog-theta.vercel.app/'
+    origin: 'https://echoblog-theta.vercel.app'
   }));
 app.use('/api/v1/users',user);
 app.use('/api/v1/admin',admin);
