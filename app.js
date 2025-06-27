@@ -14,7 +14,8 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions)); // Always first, before static files
-app.use('/files', express.static(path.join(__dirname, 'files')));
+app.use('/files', cors(corsOptions), express.static(path.join(__dirname, 'files')));
+
 app.use('/api/v1/users',user);
 app.use('/api/v1/admin',admin);
 app.use('/api/v1/author',author);
