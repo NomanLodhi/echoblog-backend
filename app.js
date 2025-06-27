@@ -9,9 +9,7 @@ const blogs=require('./routes/blog.route')
 const comments=require('./routes/comment.route')
 app.use(express.json());
 app.use('/files',express.static(path.join(__dirname,'files')))
-app.use(cors({
-    origin: 'https://echoblog-theta.vercel.app'
-  }));
+app.use(cors());
 app.use('/api/v1/users',user);
 app.use('/api/v1/admin',admin);
 app.use('/api/v1/author',author);
